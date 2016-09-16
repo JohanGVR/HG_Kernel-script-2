@@ -99,7 +99,7 @@ echo '***se continuara con la compilación***'
 echo ''
 fi
 
-#AsignandoNombreYVariable
+#AsignandoNombreYNick
 export KBUILD_BUILD_USER= $NICK
 export KBUILD_BUILD_HOST= $KERNEL
 make ARCH=arm $DEVICE
@@ -112,7 +112,8 @@ echo 'Compilando Kernel con Linario'
 echo ''
 echo '==================================='
 echo ''
-echo 'Ingrese numero de nucleos de su Equipo +1'
+echo '***Ingrese numero de nucleos de su Equipo +1***'
+echo 'Ejemplo: Si su equipo cuenta con 4 nucleos debe ingresar el numero 5 '
 read NUCLEO
 make -j$NUCLEO ARCH=arm CROSS_COMPILE=~/arm-cortex_a7-linux-gnueabihf-linaro_4.9/bin/arm-cortex_a7-linux-gnueabihf-
 
@@ -128,10 +129,10 @@ make -j$NUCLEO ARCH=arm CROSS_COMPILE=~/arm-cortex_a7-linux-gnueabihf-linaro_4.9
 
 #FIN
 echo ''
-echo '==================================='
+echo '========================================='
 echo ''
-echo 'Compilacion terminada, Felicidades!'
+echo 'Compilacion terminada, Felicidades $NICK!'
 echo ''
-echo '==================================='
+echo '========================================='
 echo ''
 sleep 10s
