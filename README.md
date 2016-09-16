@@ -11,9 +11,9 @@ Primero
 
 Dar permisos al archivo
 
-	 chmod +x Gr2.sh
+	 chmod +x HG.sh
 
 Iniciarlo
 
-	./Gr2.sh
+	./HG.sh
     
