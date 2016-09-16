@@ -1,5 +1,5 @@
 # HG_Kernel-script
-Script para automatizar las compialciones del kernel
+Script para automatizar las compilaciones del kernel
 -------------
  
 _Compilar_
@@ -7,7 +7,7 @@ _Compilar_
 
 Primero
 
-	Descargar el archivo Gr2.sh y ubicarlo en la carpeta home
+	Descargar el archivo HG.sh y ubicarlo en la carpeta home
 
 Dar permisos al archivo
 
