@@ -1,7 +1,6 @@
 #
 ##################################
 # Gr2_srk  <gr2.stark@gmail.com> #	
-# HB72K  <xxxxxxx@gmail.com>     #
 # Script Para Compilar Kernel    #
 ##################################
 #
@@ -14,11 +13,11 @@ ZIP="/home/$USUARIO/android_kernel_huawei_msm8916/zip"
 
 #Inicio
 echo ''
-echo "============================="
+echo "======================"
 echo ''
-echo "KERNEL COMPILER-DemoniackTeam"
+echo "KERNEL COMPILER by GR2"
 echo ''
-echo "============================="
+echo "======================"
 echo ''
 
 #LINARIO
@@ -38,14 +37,8 @@ echo 'Diga si o no'
 echo ''
 read start
 if [ "$start" = si ]; then
-echo '***Ingrese el perfil de su source:***'
-echo 'NOTA, SOLO EL PERFIL DEL SOURCE'
-echo 'Ejemplo: Gr2007'
-read PERFIL
-echo ''
 echo '***Ingrese la dirección de su source:***'
-echo 'NOTA, SOLO LO QUE VA DESPUES DE https://github.com/*Perfil*/ SIN EL .GIT'
-echo 'Ejemplo: android_kernel_huawei_msm8916'
+echo 'Ejemplo: https://github.com/Gr2007/android_kernel_huawei_msm8916-1.git'
 echo ''
 read SOURCE
 echo ''
@@ -53,13 +46,10 @@ echo '***Nombre del branch***'
 echo 'Ejemplo: cm-12.1-caf'
 echo ''
 read branch
-git clone https://github.com/$PERFIL/$SOURCE.git -b $branch
+git clone $SOURCE -b $branch kernel
 elif [ "$start" = no ]; then
-echo '***Ingrese el nombre de la carpeta de su source:***'
-echo 'Donde esta descargado el source, en home'
-echo 'Ejemplo: android_kernel_huawei_msm8916'
+echo '***Se tomara la carpeta por defecto***'
 echo ''
-read SOURCE
 fi
 sleep 3s
 
@@ -81,7 +71,7 @@ echo '<<<<<Edite sus modificaciones>>>>>'
 echo 'Con su explorador de archivos edite la source del kernel'
 echo ''
 sleep 5s 
-cd $SOURCE
+cd kernel
 echo ''
 echo '***Desea borrar la compilación anterior?***'
 echo "Diga si o no:"
