@@ -7,10 +7,6 @@
 
 #!/bin/bash
 
-#DIRECTORIO
-KERNEL="/home/$USUARIO/android_kernel_huawei_msm8916/arch/arm/boot/zImage"
-ZIP="/home/$USUARIO/android_kernel_huawei_msm8916/zip"
-
 #Inicio
 echo ''
 echo "======================"
@@ -51,7 +47,7 @@ elif [ "$start" = no ]; then
 echo '***Se tomara la carpeta por defecto***'
 echo ''
 fi
-sleep 3s
+sleep 1s
 
 #Cuestion
 echo ''
@@ -60,17 +56,10 @@ echo 'Ejemplo: cm_hwY635_defconfig'
 echo ''
 read DEVICE
 echo ''
-echo '***¿Cual es su nick***?'
-echo ''
-read NICK 
-echo ''
-echo '***Nombre del kernel***: ' 
-echo ''
-read KERNEL 
 echo '<<<<<Edite sus modificaciones>>>>>'
 echo 'Con su explorador de archivos edite la source del kernel'
 echo ''
-sleep 5s 
+sleep 1s 
 cd kernel
 echo ''
 echo '***Desea borrar la compilación anterior?***'
@@ -89,11 +78,6 @@ echo '***se continuara con la compilación***'
 echo ''
 fi
 
-#AsignandoNombreYNick
-export KBUILD_BUILD_USER= $NICK
-export KBUILD_BUILD_HOST= $KERNEL
-make ARCH=arm $DEVICE
-
 #Compilacion
 echo ''
 echo '==================================='
@@ -107,21 +91,11 @@ echo 'Ejemplo: Si su equipo cuenta con 4 nucleos debe ingresar el numero 5 '
 read NUCLEO
 make -j$NUCLEO ARCH=arm CROSS_COMPILE=~/arm-cortex_a7-linux-gnueabihf-linaro_4.9/bin/arm-cortex_a7-linux-gnueabihf-
 
-#zip
-#REVISA ESTE APARTADO, NO LO PROBE
-#echo ">>>Construyendo zip<<<"
-#rm -rvf $ZIP/tools/zImage
-#mv $KERNEL $ZIP/tools
-#rm -f $ZIP/*.zip
-#cd $ZIP
-#zip -r $NICK-$KERNEL-$DEVICE *
-#cd
-
 #FIN
 echo ''
 echo '========================================='
 echo ''
-echo 'Compilacion terminada, Felicidades $NICK!'
+echo 'Compilacion terminada, Felicidades'
 echo ''
 echo '========================================='
 echo ''
