@@ -89,6 +89,7 @@ echo ''
 echo '***Ingrese numero de nucleos de su Equipo +1***'
 echo 'Ejemplo: Si su equipo cuenta con 4 nucleos debe ingresar el numero 5 '
 read NUCLEO
+make ARCH=arm $DEVICE
 make -j$NUCLEO ARCH=arm CROSS_COMPILE=~/arm-cortex_a7-linux-gnueabihf-linaro_4.9/bin/arm-cortex_a7-linux-gnueabihf-
 
 #FIN
