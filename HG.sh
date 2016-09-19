@@ -1,6 +1,7 @@
 #
 ##################################
 # Gr2_srk  <gr2.stark@gmail.com> #	
+# HB72K   <xxxxxxxxxx@gmail.com> #	
 # Script Para Compilar Kernel    #
 ##################################
 #
@@ -11,7 +12,7 @@
 echo ''
 echo "======================"
 echo ''
-echo "KERNEL COMPILER by GR2"
+echo " DemoniacTeamCompiler"
 echo ''
 echo "======================"
 echo ''
